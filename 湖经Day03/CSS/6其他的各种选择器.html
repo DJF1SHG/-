@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*子代选择器*/
+			/*这个选择器，只会作用于第一层级的后代，也就是儿子辈，是不会影响到孙子辈的*/
+			/*子代选择器，使用>大于号，
+			  连接父选择器与子选择器*/
+			 
+			/*如果子代，或者后代，没有设置特殊的样式，那么被父标签设置的样式所支配
+			  比如下面的boby，给boby设置了文字颜色后，boby标签的所有后代标签都会被
+			  设置成绿色。但是，div中的p标签，和p中的span标签，有自己的设置，那么
+			  就会按照他们自己的样式来显示*/
+			div>p{
+				color: firebrick;
+			}
+			
+			div>ol{
+				font-family:  "bodoni mt";
+			}
+			/*只要span标签的父标签的class属性为a，那么该span标签就会被设置成以下样式*/
+			.a>span{
+				font-size:50px ;
+				color: gold;
+			}
+			
+			
+		</style>
+	</head>
+	<body style="color: green;">
+		<div>
+			<!--p就是div的儿子辈，也就是子代-->
+			<!--span是div的孙子辈，叫做后代-->
+			<p class="a">昨夜雨疏风骤，浓睡不消残酒，试问卷帘人，<span>却道海棠依旧。</span>知否，知否，应是绿肥红瘦。</p>
+			
+			<!--p与ol列表的关系，是兄弟层级-->
+			<ol>
+				<!--两个li之间，也是兄弟层级-->
+				<!--li是ol的子代-->
+				<!--li是div的后代-->
+				<li>枥上浮云骢，本出吴门中。发迹来东道，长鸣起北风。</li>
+				<li>回鞍拂桂白，赪汗类尘红。灭没徒留影，无因图汉宫。</li>
+			</ol>
+		</div>
+	</body>
+</html>
