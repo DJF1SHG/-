@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>用户注册</title>
+	</head>
+	<body>
+		<form>
+		<fieldset>
+			<legend>账户信息</legend>
+			<label ><span style="color: red;">*</span>用户名：</label>
+			<input type="text" name="用户名" />
+			
+			<br /><br />
+			<label ><span style="color: red;">*</span>密　码：</label>
+			<input type="password" name="密码" />
+			
+			<br /><br />
+			<label>性别：</label>
+			<input name="gender" type="radio" value="男"/>男
+			<input name="gender" type="radio" value="女"/>女
+		</fieldset>
+		
+		<fieldset>
+			<legend>公司信息</legend>
+			<br />
+			<label >公司名称：</label><input type="text" name="公司名称" />
+			<br /><br />
+			<label>公司所在地：</label>
+			
+				<select >
+					<option>---请选择----</option>
+					<option>北京</option>
+					<option>河北</option>
+					<option>上海</option>
+					<option>山东</option>
+					<option>河南</option>
+				</select>
+				
+				<select >
+					<option>---请选择----</option>
+					<option>北京</option>
+					<option>&nbsp;&nbsp;&nbsp;海淀区</option>
+					<option>&nbsp;&nbsp;&nbsp;朝阳区</option>
+					<option>&nbsp;&nbsp;&nbsp;丰台区</option>
+					<option>河北</option>
+					<option>&nbsp;&nbsp;&nbsp;石家庄</option>
+					<option>&nbsp;&nbsp;&nbsp;保定</option>
+					<option>&nbsp;&nbsp;&nbsp;邯郸</option>
+				</select>
+				
+				<select >
+					<option>---请选择----</option>
+					<option>四拨子</option>
+					<option>中关春</option>
+					<option>上地</option>
+					<option>软件园</option>
+				</select>
+				<br /><br />
+					<label>购买类型用途：</label>
+					<input type="checkbox" name="hobbies" />IT
+					<input type="checkbox" name="hobbies" />通讯设备
+					<input type="checkbox" name="hobbies" />大家电
+					<input type="checkbox" name="hobbies" />办公耗材
+				
+				<br /><br />
+				公司行业：
+				<select name="" id="" multiple="multiple">
+					<option value="">IT行业</option>
+					<option value="">计算机软件</option>
+					<option value="">市场推销</option>
+					<option value="">广告</option>
+				</select>
+				<br /><br />
+				<label>公司介绍：</label><textarea rows="10" cols="35"></textarea>
+				<br /><br />
+				<label>营业执照上传：</label><input type="file" title="选取文件" />
+				<br /><br />
+			</fieldset>
+		</form>
+		<form>
+			<img src="注册.jpg" />
+		</form>
+	</body>
+</html>
