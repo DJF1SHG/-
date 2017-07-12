@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>演示列表</title>
+	</head>
+	<body>
+		<!--无序列表-->
+		<ul>
+			<li>八月秋高风怒号，卷我屋上三重茅</li>
+			<li>茅飞渡江洒江郊，高者挂罥长林梢</li>
+			<li>下者飘转沉塘坳</li>
+			<li>南村群童欺我老无力，忍能对面为盗贼</li>
+			<li>安得广厦千万间，大庇天下寒士俱欢颜</li>
+			<li>呜呼,何时眼前突兀见此屋，吾庐独破受冻死亦足！</li>
+		</ul>
+		
+		<!--有序列表-->
+		<ol>
+			<!--列表中的元素，也就是一个item-->
+			<li>春江潮水连海平，海上明月共潮生</li>
+		</ol>
+		
+		<a href="hello.html">传送门</a>
+		
+		<!--表格标签-->
+		<table>
+			 <!--tr表示表格中的一行
+				 不管是表头中的列名，
+				 还是表中每个单元格的数据
+				 都需要写在tr标签中
+			 -->
+			 <tr>
+			 	<!--table head
+			 	 th标签，表示表头
+             	-->
+             	<th>姓名</th>
+             	<th>年龄</th>
+             	<th>性别</th>
+			 </tr>
+			 
+			 
+             
+             <!--这行表示一条数据信息-->
+             <tr>
+             	<!--table data-->
+             	<td>盖伦</td>
+             	<td>40</td>
+             	<td>男</td>
+             </tr>
+             <tr>
+             	<td>赵信</td>
+             	<td>40</td>
+             	<td>男</td>
+             </tr>                        
+		</table>
+		
+		<!--form标签：表单标签
+			action属性，表示这个表单是要访问哪个资源
+			method属性，表示这次请求属于哪种类型的请求
+        -->
+		<form action="hello.html">
+			<!--input标签的type属性，决定了这个input标签以何种形式显示到浏览器上
+            -->
+			<input type="text"  />
+			
+			<!--这是一个提交按钮-->
+			<input type="submit"  />
+		</form>
+		
+		<!--div，块状元素，一般是用来分模块的-->
+		<div style="color: lavender;">随后<span style="color: hotpink;">枪</span>出如龙
+			<span style="color: red;">长枪依在</span>
+		</div>
+		
+		<form>
+			<!--下拉列表，选项-->
+			<select>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+			</select>			
+		</form>
+		
+		<!--cmd+w,关闭标签页-->
+		<!--cmd+t,建立新标签页-->
+		<form>
+			人族<input name="gender" type="radio" value="人族"/>
+			兽人族<input name="gender" type="radio" value="兽人族"/>
+			精灵族<input name="gender" type="radio" value="精灵族"/>
+			矮人族<input name="gender" type="radio" value="矮人族"/>
+		</form>
+	</body>
+</html>
