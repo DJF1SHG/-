@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+		<script type="text/javascript">
+//			当点击确定，弹出消息提示“您已退出”     
+//			当点击取消  弹出消息“您已取消退出”
+			/*
+			var a = window.confirm("确定是否退出？");
+			
+			if(a){
+				window.alert("您已退出");
+			}else{
+				window.alert("您已取消退出");
+			}
+			*/
+//			接收用户输入一个数字，判断是否是偶数，
+//			如果是偶数那么在控制台中将该数字输出，
+//			如果不是偶数那么在控制台中提示该数字不是偶数
+			/*
+			var b = window.prompt("请输入一个数字：");
+			var c = "该数字不是偶数！";
+			
+			
+			if(b%2 == 0){
+				console.log(b);
+			}else{
+				console.log(c);
+			}
+			*/
+//			接收用户输入一个数字，判断当前数字是否在20到70之间，
+//  			如果在该数字范围内，请将该数字输出，否则提示不在该范围内。
+			/*
+			var d = window.prompt("请输入一个数字：")；
+			if(d >20 && d < 70){
+				window.alert(d);
+			}else{
+				window.alert("该数不在该范围！")
+			}
+			*/
+//			写一个程序接收用户输入的值，该值和随机产生的随机数（0-99  包含0和99）
+//			做比较，如果用户输入的值大于随机数输出：赢了，否则您输了
+			
+			var e = window.prompt("请输入一个值：");
+			var f = Math.round(Math.random()*99);
+			if(e > f){
+				window.alert("您赢了！！")
+			}else{
+				window.alert("您输了！！")
+			}
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

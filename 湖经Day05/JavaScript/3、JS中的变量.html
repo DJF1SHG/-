@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JS中的变量</title>
+		<script type="text/javascript">
+			//JS代码
+			
+			//n = 1;
+			
+			//正规写法
+			//声明一个变量n
+			//n指向了一个数字1
+			var n = 1;
+			var n = "一脸懵○";
+			
+			//给个变量n，赋值了一个boolean类型true
+			n = true;
+			
+			//undefined：未定义的
+			var m;
+			
+			//l这个变量指向了null
+			//而上面定义的m，并没有指向任何内容
+			var l = null;
+			
+			//当被用作数字时，null表示0
+			//被用作Boolean时，null表示false
+			l = true;
+			
+			if(null){
+				//window.alert("你好啊！")
+			}else{
+				//window.alert("我很不好！")
+			}
+			
+			//m是一个未定义的变量
+			//200是一个整型变量
+			//得到的result变量的值是：NaN
+			var result = m - 200;
+			
+			//字符串"300"在与整型200做减法的时候
+			//js会先将字符串"300"转换为整型300
+			//再与200做减法操作
+			var r = "300" - 200;
+			//字符串"ddd"，无法转换成一个有效的整型变量
+			//那么和2做减法操作时，是无法得到一个有效的结果的，得到的是NaN。
+			r = "ddd" - 2;
+			//NaN表示，非数值
+			
+			//字符串的拼接
+			r = "sss" + 200;
+			window.alert(r);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
