@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>带参数的构造函数</title>
+		<script type="text/javascript">
+			function Hero (name,skill,type) {
+				this.name = name;
+				this.skill = skill;
+				this.type = type;
+				
+				this.useSkill = function () {
+					alert(this.name+"使用了"+this.skill);
+				}
+				
+				this.showInfo = function () {
+					alert("姓名：" + this.name+
+						  "--技能：" + this.skill+
+						  "--类型" + this.type);
+				}
+			}
+			
+			var yase = new Hero("亚瑟","神龙摆尾","是一个护盾");
+		</script>
+	</head>
+	<body>
+		<button onclick="yase.useSkill()">使用技能</button>
+		<button ondblclick="yase.showInfo()">获取信息</button>
+	</body>
+</html>

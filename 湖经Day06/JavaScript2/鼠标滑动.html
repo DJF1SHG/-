@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>鼠标滑动</title>
+		<!--onmouseover 鼠标滑进了元素
+			onmouseout 鼠标滑出了元素
+			当鼠标滑进img元素时，显示girl.jpg，
+			鼠标滑出时显示kwy.jpg,初始显示kwy.jpg
+		-->
+		<script type="text/javascript">
+			function mouseOver () {
+				var t = document.getElementById("t");
+				t.src = "img/1.jpg";
+				
+			}
+			function mouseOut () {
+				var t = document.getElementById("t");
+				this.src = "img/2.jpg";
+			}
+		</script>
+	</head>
+	<body>
+		
+		
+		<img id="t" src="img/2.jpg" onmouseover="mouseOver()" onmouseout="mouseOut()"/>
+		
+	</body>
+</html>

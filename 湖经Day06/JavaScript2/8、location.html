@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>location</title>
+		<script type="text/javascript">
+			//location是window的属性
+			//window。location可以直接使用
+			//location就是浏览器输入栏的抽象对象，可以通过location获得一些地址信息
+			
+			function gogogo () {
+				//如果使用replace()函数，那么当前页面，不会出现在history对象中
+//				location.replace("练习轮播图.html")
+				location.href = "index.html#green"
+//				location.reload();//重新加载，刷新
+				
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="gogogo()">GOGOGO</button>
+		
+		<a href="9、history.html">去history页面</a>
+	</body>
+</html>

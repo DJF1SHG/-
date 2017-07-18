@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>定时器</title>
+		<script type="text/javascript">
+//			setInterval
+//			可用来循环做某件事情
+//			fn是一个函数，也就是要循环做的事情
+//			time是多少毫秒执行一次，该函数有返回值，返回值就是这个定时器的名字
+//			根据名字，停止该定时器
+			var r = 0;
+			function count () {
+				console.log(++r);
+			}
+			
+//			var timerId = setInterval(count,2000);
+			
+			//5s后执行count函数，只执行一次，也就是一种延时性操作
+			var timerId = setTimeout(count,5000);
+		</script>
+	</head>
+	<body>
+		<button>停止</button>
+	</body>
+	<script type="text/javascript">
+		//得到的是一个数组，区0角标的btn
+		var btn = document.getElementsByTagName("button")[0];
+		btn.onclick = function () {
+			clearInterval(timerId);
+		}
+	</script>
+</html>

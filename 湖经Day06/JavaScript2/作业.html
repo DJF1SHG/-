@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			p{
+				background-color: blue;
+				color: white;
+			}
+			.out{
+				background-color: blue;
+				color: white;
+			}
+			.in{
+				background-color: antiquewhite;
+				color: aliceblue;
+			}
+			.click{
+				background-color: firebrick;
+				color: white;
+			}
+		</style>
+		<script type="text/javascript">
+			function Student (name,year,gender) {
+				this.name = name;
+				this.year = year;
+				this.gender = gender;
+				
+				this.dohomework = function () {
+					alert(this.name + "已经开始做作业了，加油");
+				}
+				this.show = function () {
+					return("注册的姓名为：" + this.name + "<br />注册的年龄为：" + this.year+ "<br />注册的性别:" +this.gender);
+				}
+			}
+			window.onload = function(){
+				var btn = document.getElementsByTagName("button")[0];	
+				var btn1 = document.getElementsByTagName("button")[1];
+				var ip = document.getElementById("p");
+				var stu;
+				btn1.onclick = function(){
+					stu.dohomework();	
+				};
+				btn.onclick = function(){
+					var name = document.getElementsByTagName("input")[0];
+					var year = document.getElementsByTagName("input")[1];
+					var gender = document.getElementsByTagName("input")[2];
+					stu = new Student(name.value,year.value,gender.value);
+					ip.innerHTML = stu.show();
+					this.className = "click";
+				}
+				btn.onmouseover = function(){
+					this.className = "in";
+				};
+				btn.onmouseout = function(){
+					this.className = "out";
+				};
+			};
+		</script>
+	</head>
+	<body>
+		<label >姓名：</label>
+		<input type="text" />
+		<br />
+		<label >年龄：</label>
+		<input type="number" />
+		<br />
+		<label >性别：</label>
+		<input type="text" />
+		
+		<button class="out">注册</button>
+		<p id="p"></p>
+		<button>做作业</button>
+	</body>
+</html>

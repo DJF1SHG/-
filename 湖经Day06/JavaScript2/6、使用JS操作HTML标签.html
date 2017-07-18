@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>使用JS操作html标签</title>
+		<script type="text/javascript">
+			//getElementById
+			//getElementByTagName
+			//document对象的两个函数可以帮助我们获得对应的html标签对象
+			//document是DOM（文档对象模型）中由html文档抽象出来的一个对象
+			//BOM（Browser Object Model）
+			//浏览器对象模型中有一个widow对象，也就是浏览器窗口抽象出来的对象
+			//DOM还有location，navigator，history比较重要。
+			
+			//对象是事物/实体的抽象
+			
+			//现在是找不到id为btn的<button/>标签的
+			//因为加载script标签时，boby标签还没有被加载
+			
+			//当整个文档加载完毕之后，会执行这个函数，加载函数中的js语句
+			window.onload = function (){
+				var d = document.getElementById("d");
+				d.innerHTML = "隐藏";
+			};
+			
+			
+		</script>
+	</head>
+	<body>
+		<button>显示</button>
+		
+		<img src="img/2.png" />
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//创建对象
+			var obj = new Object();
+			//给对象添加一个name属性
+			//值为张三
+			obj.name = "张三";
+			obj.age = 19;
+			
+			function pyLate () {
+				alert("hjqLate");
+			}
+			//pyLate()表示要调用这个函数
+			//如果不写（），则pyLate就值代了上面定义的那个函数
+			//下面也就是将pyLate函数，赋值给了obj的doWhat
+			obj.doWhat = pyLate;
+			
+			//通过匿名函数的方式，给obj对象添加一个函数
+			obj.sing = function (){
+				alert("三生三世十里桃花");
+			}
+//			obj.doWhat();
+			obj.sing();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

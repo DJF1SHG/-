@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+
+        a {
+        		/*去掉a标签中的下划线*/
+            text-decoration: none;
+        }
+
+        ul {
+        		/*去掉ul中的缩进*/
+            padding: 0;
+        }
+
+		/*imagegallery这个id选择器的后代li*/
+        #imagegallery li {
+            margin: 0px 10px 20px 0px;
+            /*将li标签设置为行内元素，这样就实现了横向列表*/
+            display: inline;
+        }
+
+      
+    </style>
+
+</head>
+<body>
+<h2>
+    美女画廊
+</h2>
+<ul id="imagegallery">
+    <li>
+    		
+        <a href="img/1.jpg" title="美女A">
+            <img src="img/1-small.jpg" width="100px" />
+        </a>
+    </li>
+    <li>
+        <a href="img/2.jpg" title="美女B">
+            <img src="img/2-small.jpg" width="100px" />
+        </a>
+    </li>
+    <li>
+        <a href="img/3.jpg" title="美女C">
+            <img src="img/3-small.jpg" width="100px" />
+        </a>
+    </li>
+    <li>
+        <a href="img/4.jpg" title="美女D">
+            <img src="img/4-small.jpg" width="100px" />
+        </a>
+    </li>
+</ul>
+
+
+<img id="image" src="img/placeholder.png" width="450px"/>
+
+<!--用来描述当前图片是哪个-->
+<p id="des">选择一个图片</p>
+
+
+</body>
+<script>
+   
+    //获取ul  再获取ul中的a标签
+    var ul = document.getElementById("imagegallery");
+    //注意这里获得的links是一个数组
+    var links = ul.getElementsByTagName("a");
+    //用来显示大图的img
+    var img = document.getElementById("image");
+    //用来描述的p
+    var p = document.getElementById("des");
+    //给a注册事件
+    for (var i = 0; i < links.length; i++) {
+        //获取到每一个a
+        links[i].onclick = function () {
+        		//这里的this，就指代的被点击的a标签
+            //将a中的链接，赋值到img的src属性上，实现图片的转换
+            img.src = this.href;
+            //将a中的title属性，设置到p标签上，用作标题显示
+            p.innerHTML = this.title;
+            //如果不写返回false，则相当于a标签直接跳转到对应图片页面了
+            //返回false，则a标签被点击后，执行这个函数，但是不会跳转到图片页面
+            return false;
+        }
+    }
+
+</script>
+</html>

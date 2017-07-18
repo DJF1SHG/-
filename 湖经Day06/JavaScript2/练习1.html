@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>练习1</title>
+		<script type="text/javascript">
+			function showGirl() {
+				var img = document.getElementById("img");
+				img.src = "img/girl.jpg";
+			}
+
+			function showDog() {
+				var img = document.getElementById("img");
+				this.src = "img/dog.jpg";
+			}
+		</script>
+	</head>
+
+	<body>
+		<img id="img" src="img/dog.jpg" onmouseover="showGirl()" onmouseout="showDog()" />
+	</body>
+
+</html>

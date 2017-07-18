@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JS中的数组</title>
+		<script type="text/javascript">
+			//定义数组的两种方式
+			//可以在刚开始定义数组时，给该数组初始的元素
+			var attr = ["庄周","阿珂"];
+			var attr2 = new Array();
+			
+			attr[0] = "张三";
+			attr[1] = "李四";
+			attr[2] = "王五";
+			attr[3] = "赵六";
+			
+			//push函数，会将内容添加到数组末尾
+			//有几个参数，就会添加几个值
+			attr.push("虞姬","妲己","诸葛亮","黄忠");
+			//从数组开头开始添加
+			attr.unshift("我会添加到那里呢？？？？？");
+			
+			//数组对象，有一个forEach函数
+			//在forEach函数中，添加一个回掉函数
+			//回调函数的参数，就是每次遍历数组时，当前的数组元素
+			var result = "";
+			attr.forEach(function (e) {
+				result = result + e + "-------";
+			});
+			alert(result);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

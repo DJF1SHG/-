@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js作业</title>
+    <style type="text/css">
+        .btn{
+            background-color: blue;
+            color: white;
+        }
+        .onMouseOver{
+            background-color: aqua;
+            color: brown;
+        }
+    </style>
+    <script type="text/javascript">
+		
+        function Student(name,age,gender) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+
+            this.doHomework = function () {
+                alert(this.name+"已经开始做作业了,加油");
+            }
+        }
+
+        function onMouseOverBtn() {
+            var btn = document.getElementById("register");
+            btn.style.background = "#00FFFF";
+            btn.style.color = "#A52A2A";
+        }
+
+        function onMouseOutBtn() {
+            var btn = document.getElementById("register");
+            btn.style.background = "#0000FF";
+            btn.style.color = "#FFFFFF";
+        }
+
+        function onClickedBtn() {
+            var btn = document.getElementById("register");
+            btn.style.background = "#FF0000";
+            btn.style.color = "#FFFFFF";
+        }
+
+        function onRegisterClicked() {
+            onClickedBtn();
+            stu = new Student(getName(),getAge(),getGender());
+            showMsg(stu);
+
+        }
+
+        function getName() {
+            var nameInput = document.getElementById("name");
+            return nameInput.value;
+        }
+        function getAge() {
+            var ageInput = document.getElementById("age");
+            return ageInput.value;
+        }
+        function getGender() {
+            var genderInput = document.getElementById("gender");
+            return genderInput.value;
+        }
+
+        var stu = null;
+
+
+        function showMsg(stu) {
+            var showDiv = document.getElementById("showDiv");
+            var n = "注册的姓名为:"+stu.name+"<br />";
+            var a = "注册的年龄为:"+stu.age+"<br />";
+            var g = "注册的性别为:"+stu.gender+"<br />";
+
+            showDiv.innerHTML=n+a+g;
+        }
+
+    </script>
+</head>
+<body>
+    <label for="name">姓名:</label> <input id="name" type="text" >
+    <br/>
+    <label for="age">年龄:</label> <input id="age" type="text" >
+    <br/>
+    <label for="gender">性别:</label> <input id="gender" type="text" >
+    <button id="register"
+            class="btn"
+            onmouseover="onMouseOverBtn()"
+            onmouseout="onMouseOutBtn()"
+            onclick="onRegisterClicked()">
+        注册
+    </button>
+
+    <div id="showDiv" style="line-height: 30px;color: white;background-color: blue"></div>
+
+    <button onclick="stu.doHomework()">做作业</button>
+
+</body>
+</html>

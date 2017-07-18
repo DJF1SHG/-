@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>演示轮播图</title>
+		<script type="text/javascript">
+			window.onload = function () {
+				//根据id获得img对象
+				var img = document.getElementById("img");
+				//创建一个数组，里面存着要显示的图片
+				var arr = new Array("img/12.jpg","img/22.jpg","img/32.jpg","img/42.jpg");
+				//要显示哪一张图，用pos作为角标
+				//去arr数组中取
+				var pos = 1;
+				//修改图片的函数
+				function changeImg () {
+					//从arr数组中，取出图片地址，设置到img
+					//的src属性上
+					img.src = arr[pos];
+					//如果pos自加后的值大于3(数组中一共有四张图，最大值是3)
+					//因为pos自加了，所以下次执行时，
+					//pos已经被改变了
+					//那么将pos重置为0
+					if(++pos > 3){
+						pos = 0;
+					}
+				}
+				//开启一个定时器，每隔3秒改变一次图片
+				setInterval(changeImg,3000);
+			}
+		</script>
+	</head>
+	<body>
+		<img id="img" src="img/12.jpg" style="width: 200px;height: 200px;" />
+	</body>
+</html>

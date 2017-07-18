@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>构造函数</title>
+		<script type="text/javascript">
+			//创建一个构造函数
+			//构造函数一般都是大驼峰
+			//首字母不大写也不会错
+			function Student () {
+//			java中this指代当前类对象
+//			this指的就是使用Student构造函数,构造出的这个对象
+
+				this.name = "杨戬";
+				
+				this.school = "蓝鸥科技";
+				
+				//给this这个对象，添加一个函数goHome
+				//function（addr）括号中的addr就是这个函数的参数
+				//因为js是弱类型语言，这里就不需要指定参数类型
+				//我们在这个函数中，是将addr当做字符串使用的，
+				//所以无论传进来的参数是什么类型都会当做字符串显示
+				this.goHome = function (addr) {
+					alert(this.name+"回到了"+addr);
+				}
+			}
+			
+			//与java中一样，通过new关键字创建一个student对象stu，声明的类型都是使用var
+			var stu = new Student();
+			
+			stu.goHome("灌江五龙口");
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
